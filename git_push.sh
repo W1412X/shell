@@ -26,7 +26,7 @@ repo_name=`basename $(pwd) | tr -d "\n" `
 echo "|-> Repository $repo_name"
 explain_command
 #try to get the remote respository
-status_code=$(curl -k -I -s -o /dev/null -w "%{http_code}" "https://github.com/$username/$repo_name")
+status_code=$(curl -I -s -o /dev/null -w "%{http_code}" "https://github.com/$username/$repo_name")
 if [ -d ".git" ]; then
     if [ "$status_code" -eq 200 ];then
         echo "|-> Found repository $repo_name"
