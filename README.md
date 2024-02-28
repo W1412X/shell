@@ -1,7 +1,11 @@
+> 需要自行配置好本地的git全局变量
 ## connect.sh
 - 第一个文件可以直接方便的配置虚拟机以使得可以在远程链接到虚拟机(Linux)
 - 直接在connect.sh所在目录下运行
   ```shell
+  git clone https://github.com/W1412X/shell.git
+  cd shell
+  chmod +x connect.sh
   ./connect.sh
   ```
 ## git_push.sh
@@ -10,7 +14,7 @@
     - 使用
       ```shell
       git clone https://github.com/W1412X/shell_git.git  
-      cd shell_git  
+      cd shell
       ./install.sh  
       ```
       > 提示输入的Username你需要输入你的Github用户名  
@@ -31,3 +35,4 @@
       ```
     -  之后对本文件夹下的文件的更改也可以在test目录下运行git_push实现
   - 命令执行输出在本目录下的gitpush_log文件中
+> A 

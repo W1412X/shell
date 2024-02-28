@@ -40,13 +40,6 @@ if [ -d ".git" ]; then
     git branch -M $branch >> gitpushlog
     git remote add origin "https://github.com/$username/$repo_name.git" >> gitpushlog
     git push origin main >> gitpushlog
-    # 匹配提示输入用户名的文本，并发送用户名
-    echo "|-> Examine the username and token"
-    expect "Username for '*':"
-    send "$username"
-    # 匹配提示输入密码的文本，并发送密码
-    expect "Password for '*':"
-    send "$token"
     echo "|-> Push OK"
 else
     echo "|-> This catagory is not a repository,will init it"
