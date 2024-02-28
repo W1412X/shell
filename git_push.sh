@@ -60,17 +60,16 @@ else
     git branch -M main >> gitpushlog
     git remote add origin "https://github.com/$username/$repo_name.git" >> gitpushlog
     echo "|-> Examine the username and token"
-
-    # 执行 git push 并将输出追加到日志文件 gitpushlog
     git push origin main >> gitpushlog
+# 执行 git push 操作
+spawn git push origin main
+# 匹配提示输入用户名的文本，并发送用户名
+expect "Username for '*':"
+send "username\r"
 
-    # 使用 expect 自动输入用户名和密码
-    expect << EOF
-    spawn git push
-    expect "Username for '*':"
-    send "$username\n"
-    expect "Password for '*':"
-    send "$token\n"
-    expect eof
-    EOF
+# 匹配提示输入密码的文本，并发送密码
+expect "Password for '*':"
+send "$token\r"
+
+expect eof
 fi
