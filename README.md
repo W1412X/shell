@@ -1,4 +1,5 @@
 > git_push命令的使用需要自行配置好本地的git全局变量
+  适用于Debian以及基于Debian构建的系统
 ## connect.sh
 - 第一个文件可以直接方便的配置虚拟机以使得可以在远程链接到虚拟机(Linux)
 - 直接在connect.sh所在目录下运行
