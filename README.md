@@ -6,6 +6,7 @@
   ```
 ## git_push.sh
 - 可以方便的在本地创建仓库，更新仓库并同步到Github
+    - 对应创建的仓库名称即为该目录名称
     - 使用
       ```shell
       git clone https://github.com/W1412X/shell_git.git  
