@@ -1,6 +1,5 @@
 #/bin/bash
 echo "|-> Config git"
-git config 
 read -p "Enter the Github Username:" username
 read -p "Enter the token you get:" token
 echo "$username" > ./.W_GITPUSH_TOKEN
