@@ -1,4 +1,8 @@
 #/bin/bash
+echo "|-> Install the tools(expect)"
+sudo apt update
+sudo apt install expect
+
 echo "|-> Config git"
 read -p "Enter the Github Username:" username
 read -p "Enter the token you get:" token
